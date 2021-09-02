@@ -32,20 +32,6 @@
             "ansible_env_vars": [
                 "ANSIBLE_HOST_KEY_CHECKING=False"
             ]
-        },
-
-        {
-            "type": "file",
-            "source": "./packer/test_packer.py",
-            "destination": "/tmp/test_packer.py"
-        },
-
-        {
-            "type": "shell",
-            "inline": [
-                "sudo pip install --upgrade pip pytest testing",
-                "sudo pytest -v /tmp/test_packer.py"
-            ]
         }
     ]
 }
