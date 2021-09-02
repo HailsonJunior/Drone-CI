@@ -6,12 +6,6 @@ terraform {
         }
     }
     required_version = ">= 0.14.9"
-    
-    backend "s3" {
-        bucket = "iaasweek-tfstate"
-        key = "terraform.tfstate"
-        region = "us-east-1"
-    }
 }
 
 provider "aws" {
