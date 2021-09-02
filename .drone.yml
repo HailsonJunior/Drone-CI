@@ -33,6 +33,6 @@ steps:
     AWS_SECRET_ACCESS_KEY:
       from_secret: AWS_SECRET_ACCESS_KEY
   commands:
-    - terraform init -var "hash_commit=$DRONE_COMMIT" -chdir terraform/
-    - terraform plan -var "hash_commit=$DRONE_COMMIT" -out plano -chdir terraform/
+    - terraform init -var -chdir terraform/
+    - terraform plan -var -out plano -chdir terraform/
     - terraform apply "plano"
