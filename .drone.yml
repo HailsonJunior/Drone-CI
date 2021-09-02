@@ -35,4 +35,4 @@ steps:
   commands:
     - terraform -chdir=terraform/ init
     - terraform -chdir=terraform/ plan -out plano
-    - terraform apply "plano"
+    - terraform -chdir=terraform apply -auto-approve
